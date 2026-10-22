@@ -1,0 +1,120 @@
+{
+  "version": "preprocessing-v2",
+  "source": "/kaggle/input/datasets/mahletadane/gpac-data/GPAC.txt",
+  "sample_fraction": 1.0,
+  "seeds": {
+    "sample": 42,
+    "split": 7
+  },
+  "rules": {
+    "sentence_delimiters": [
+      "፡፡",
+      "::",
+      "።",
+      "?",
+      "!",
+      "፧"
+    ],
+    "spelling": "NFC; ሐ ኀ -> ሀ; ሠ -> ሰ; ዐ ዓ ኣ -> አ; ፀ -> ጸ (all 7 vowel orders; the 4th order of ዐ and አ also -> አ); ሃ ሓ ኃ -> ሀ",
+    "punctuation": "dropped; only <s> and </s> mark sentence boundaries",
+    "numbers": "digits or Ethiopic numerals -> <NUM>, attached letters kept (19ኛ -> <NUM>ኛ, በ1980 -> በ<NUM>); identical consecutive numbers collapse; different numbers do not",
+    "max_tokens_per_sentence": 100,
+    "split": "80/10/10 by hash of the normalized sentence (blake2b, seed in 'seeds')",
+    "vocabulary": "top 50,000 incl. 4 special tokens, from train only",
+    "dedup_dev_test": false
+  },
+  "corpus": {
+    "pieces_total": 5089654,
+    "raw_words_total": 79375985,
+    "pieces_sampled": 5089654
+  },
+  "sentences": {
+    "train": 4067589,
+    "dev": 508114,
+    "test": 504690
+  },
+  "tokens": {
+    "train": 60807436,
+    "dev": 7589622,
+    "test": 7569847
+  },
+  "unk_tokens": {
+    "train": 8476878,
+    "dev": 1067554,
+    "test": 1064017
+  },
+  "unk_rate_percent": {
+    "train": 13.94,
+    "dev": 14.07,
+    "test": 14.06
+  },
+  "dropped_too_long": 7673,
+  "tokens_discarded": 1385403,
+  "tokens_discarded_percent": 1.79,
+  "empty_after_tokenize": 1588,
+  "duplicate_sentences": {
+    "train": 988589,
+    "dev": 123668,
+    "test": 120510
+  },
+  "removed_duplicates": 0,
+  "vocab": {
+    "size": 50000,
+    "unique_words_train": 1581903,
+    "unique_words_total": 1782656
+  },
+  "special_ids": {
+    "<PAD>": 0,
+    "<UNK>": 1,
+    "<s>": 2,
+    "</s>": 3
+  },
+  "normalization_examples": [
+    {
+      "raw": "ሲጠጣ፣ በሩቅ እያየች",
+      "tokens": [
+        "ሲጠጣ",
+        "በሩቅ",
+        "እያየች"
+      ]
+    },
+    {
+      "raw": "የአለም የእግር ኳስ ዋ ለ19ኛ ጊዜ",
+      "tokens": [
+        "የአለም",
+        "የእግር",
+        "ኳስ",
+        "ዋ",
+        "ለ<NUM>ኛ",
+        "ጊዜ"
+      ]
+    },
+    {
+      "raw": "በ1980 ዓ.ም",
+      "tokens": [
+        "በ<NUM>",
+        "አ",
+        "ም"
+      ]
+    },
+    {
+      "raw": "መጽሐፍ ሐምሌ ዓለም ሠላም",
+      "tokens": [
+        "መጽሀፍ",
+        "ሀምሌ",
+        "አለም",
+        "ሰላም"
+      ]
+    },
+    {
+      "raw": "ሃገር ሓገር ኃይል ሀገር",
+      "tokens": [
+        "ሀገር",
+        "ሀገር",
+        "ሀይል",
+        "ሀገር"
+      ]
+    }
+  ],
+  "seconds": 397
+}
