@@ -1,9 +1,3 @@
-"""Member 4: perplexity and random sentence generation for the repo's NGramModel.
-
-Usage (in the Kaggle notebook, after the repo is cloned to /kaggle/working/code):
-    import sys; sys.path.insert(0, "/kaggle/working"); sys.path.insert(0, "/kaggle/working/code")
-    import lm_eval
-"""
 import math
 import numpy as np
 
