@@ -1,0 +1,63 @@
+{
+  "development_tuning_only": true,
+  "test_data_used": false,
+  "perplexity_computed": false,
+  "sample_seed": 42,
+  "sampled_complete_sentences": 5000,
+  "scored_events_including_eos": 80507,
+  "add_k_grid": [
+    1e-05,
+    3e-05,
+    0.0001,
+    0.0003,
+    0.001,
+    0.003,
+    0.01,
+    0.03,
+    0.1,
+    0.3,
+    1.0
+  ],
+  "best_add_k_by_order": {
+    "1": {
+      "order": 1,
+      "k": 1e-05,
+      "mean_dev_log_probability": -7.8009912205530005,
+      "events": 80507
+    },
+    "2": {
+      "order": 2,
+      "k": 0.01,
+      "mean_dev_log_probability": -6.264504835116886,
+      "events": 80507
+    },
+    "3": {
+      "order": 3,
+      "k": 0.001,
+      "mean_dev_log_probability": -7.518115702352875,
+      "events": 80507
+    },
+    "4": {
+      "order": 4,
+      "k": 0.0003,
+      "mean_dev_log_probability": -8.72957872053161,
+      "events": 80507
+    }
+  },
+  "interpolation_weight_step": 0.1,
+  "interpolation_candidates_tested": 286,
+  "best_interpolation": {
+    "weights_unigram_bigram_trigram_fourgram": [
+      0.2,
+      0.4,
+      0.1,
+      0.3
+    ],
+    "mean_dev_log_probability": -5.7100815854737395,
+    "events": 80507
+  },
+  "prediction_vocabulary_size": 49998,
+  "normalization_tolerance": 1e-06,
+  "normalization_checks_passed": 25,
+  "maximum_normalization_error": 2.220446049250313e-16
+}
