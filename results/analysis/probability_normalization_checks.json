@@ -1,0 +1,234 @@
+{
+  "development_data_only": true,
+  "test_data_used": false,
+  "checks": [
+    {
+      "context_number": 1,
+      "method": "add_k",
+      "order": 1,
+      "k": 1e-05,
+      "probability_sum": 1.0,
+      "absolute_error": 0.0
+    },
+    {
+      "context_number": 1,
+      "method": "add_k",
+      "order": 2,
+      "k": 0.01,
+      "probability_sum": 1.0,
+      "absolute_error": 0.0
+    },
+    {
+      "context_number": 1,
+      "method": "add_k",
+      "order": 3,
+      "k": 0.001,
+      "probability_sum": 1.0,
+      "absolute_error": 0.0
+    },
+    {
+      "context_number": 1,
+      "method": "add_k",
+      "order": 4,
+      "k": 0.0003,
+      "probability_sum": 1.0,
+      "absolute_error": 0.0
+    },
+    {
+      "context_number": 1,
+      "method": "interpolation",
+      "order": 4,
+      "weights": [
+        0.2,
+        0.4,
+        0.1,
+        0.3
+      ],
+      "probability_sum": 1.0,
+      "absolute_error": 0.0
+    },
+    {
+      "context_number": 2,
+      "method": "add_k",
+      "order": 1,
+      "k": 1e-05,
+      "probability_sum": 1.0,
+      "absolute_error": 0.0
+    },
+    {
+      "context_number": 2,
+      "method": "add_k",
+      "order": 2,
+      "k": 0.01,
+      "probability_sum": 1.0,
+      "absolute_error": 0.0
+    },
+    {
+      "context_number": 2,
+      "method": "add_k",
+      "order": 3,
+      "k": 0.001,
+      "probability_sum": 1.0,
+      "absolute_error": 0.0
+    },
+    {
+      "context_number": 2,
+      "method": "add_k",
+      "order": 4,
+      "k": 0.0003,
+      "probability_sum": 1.0000000000000002,
+      "absolute_error": 2.220446049250313e-16
+    },
+    {
+      "context_number": 2,
+      "method": "interpolation",
+      "order": 4,
+      "weights": [
+        0.2,
+        0.4,
+        0.1,
+        0.3
+      ],
+      "probability_sum": 1.0,
+      "absolute_error": 0.0
+    },
+    {
+      "context_number": 3,
+      "method": "add_k",
+      "order": 1,
+      "k": 1e-05,
+      "probability_sum": 1.0,
+      "absolute_error": 0.0
+    },
+    {
+      "context_number": 3,
+      "method": "add_k",
+      "order": 2,
+      "k": 0.01,
+      "probability_sum": 0.9999999999999999,
+      "absolute_error": 1.1102230246251565e-16
+    },
+    {
+      "context_number": 3,
+      "method": "add_k",
+      "order": 3,
+      "k": 0.001,
+      "probability_sum": 1.0,
+      "absolute_error": 0.0
+    },
+    {
+      "context_number": 3,
+      "method": "add_k",
+      "order": 4,
+      "k": 0.0003,
+      "probability_sum": 1.0,
+      "absolute_error": 0.0
+    },
+    {
+      "context_number": 3,
+      "method": "interpolation",
+      "order": 4,
+      "weights": [
+        0.2,
+        0.4,
+        0.1,
+        0.3
+      ],
+      "probability_sum": 1.0,
+      "absolute_error": 0.0
+    },
+    {
+      "context_number": 4,
+      "method": "add_k",
+      "order": 1,
+      "k": 1e-05,
+      "probability_sum": 1.0,
+      "absolute_error": 0.0
+    },
+    {
+      "context_number": 4,
+      "method": "add_k",
+      "order": 2,
+      "k": 0.01,
+      "probability_sum": 1.0,
+      "absolute_error": 0.0
+    },
+    {
+      "context_number": 4,
+      "method": "add_k",
+      "order": 3,
+      "k": 0.001,
+      "probability_sum": 1.0,
+      "absolute_error": 0.0
+    },
+    {
+      "context_number": 4,
+      "method": "add_k",
+      "order": 4,
+      "k": 0.0003,
+      "probability_sum": 1.0,
+      "absolute_error": 0.0
+    },
+    {
+      "context_number": 4,
+      "method": "interpolation",
+      "order": 4,
+      "weights": [
+        0.2,
+        0.4,
+        0.1,
+        0.3
+      ],
+      "probability_sum": 1.0,
+      "absolute_error": 0.0
+    },
+    {
+      "context_number": 5,
+      "method": "add_k",
+      "order": 1,
+      "k": 1e-05,
+      "probability_sum": 1.0,
+      "absolute_error": 0.0
+    },
+    {
+      "context_number": 5,
+      "method": "add_k",
+      "order": 2,
+      "k": 0.01,
+      "probability_sum": 1.0,
+      "absolute_error": 0.0
+    },
+    {
+      "context_number": 5,
+      "method": "add_k",
+      "order": 3,
+      "k": 0.001,
+      "probability_sum": 1.0,
+      "absolute_error": 0.0
+    },
+    {
+      "context_number": 5,
+      "method": "add_k",
+      "order": 4,
+      "k": 0.0003,
+      "probability_sum": 1.0,
+      "absolute_error": 0.0
+    },
+    {
+      "context_number": 5,
+      "method": "interpolation",
+      "order": 4,
+      "weights": [
+        0.2,
+        0.4,
+        0.1,
+        0.3
+      ],
+      "probability_sum": 1.0,
+      "absolute_error": 0.0
+    }
+  ],
+  "check_count": 25,
+  "maximum_absolute_error": 2.220446049250313e-16,
+  "tolerance": 1e-06
+}

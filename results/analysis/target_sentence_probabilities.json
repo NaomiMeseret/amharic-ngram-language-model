@@ -1,0 +1,147 @@
+{
+  "sentence": "ኢትዮጵያ በአፍሪካ ቀንድ ትገኛለች።",
+  "normalized_text": "ኢትዮጵያ በአፍሪካ ቀንድ ትገኛለች።",
+  "tokens": [
+    "ኢትዮጵያ",
+    "በአፍሪካ",
+    "ቀንድ",
+    "ትገኛለች"
+  ],
+  "unknown_tokens": [],
+  "unknown_token_count": 0,
+  "model_directory": "/kaggle/working/ngram_results/model",
+  "model_max_order": 4,
+  "boundary_convention": "Each order prepends order-1 <s> contexts and predicts every token plus </s>; <s> is not predicted.",
+  "smoothing": {
+    "method": "add_k",
+    "k": 1.0,
+    "prediction_vocabulary_size": 49998,
+    "prediction_outcomes": "all IDs except <PAD> and <s>; includes <UNK> and </s>"
+  },
+  "results": [
+    {
+      "order": 1,
+      "method": "mle",
+      "k": null,
+      "log_probability": -38.66856742619231,
+      "probability": 1.608623999234119e-17,
+      "zero_probability_events": [],
+      "probability_underflow": false,
+      "direct_check_agrees": true
+    },
+    {
+      "order": 1,
+      "method": "add_k",
+      "k": 1.0,
+      "log_probability": -38.671436879600364,
+      "probability": 1.6040147438017213e-17,
+      "zero_probability_events": [],
+      "probability_underflow": false,
+      "direct_check_agrees": true
+    },
+    {
+      "order": 2,
+      "method": "mle",
+      "k": null,
+      "log_probability": "-Infinity",
+      "probability": 0.0,
+      "zero_probability_events": [
+        {
+          "context": [
+            "ቀንድ"
+          ],
+          "target": "ትገኛለች",
+          "target_id": 3225
+        }
+      ],
+      "probability_underflow": false,
+      "direct_check_agrees": true
+    },
+    {
+      "order": 2,
+      "method": "add_k",
+      "k": 1.0,
+      "log_probability": -30.440644202405963,
+      "probability": 6.022768874514582e-14,
+      "zero_probability_events": [],
+      "probability_underflow": false,
+      "direct_check_agrees": true
+    },
+    {
+      "order": 3,
+      "method": "mle",
+      "k": null,
+      "log_probability": "-Infinity",
+      "probability": 0.0,
+      "zero_probability_events": [
+        {
+          "context": [
+            "በአፍሪካ",
+            "ቀንድ"
+          ],
+          "target": "ትገኛለች",
+          "target_id": 3225
+        },
+        {
+          "context": [
+            "ቀንድ",
+            "ትገኛለች"
+          ],
+          "target": "</s>",
+          "target_id": 3
+        }
+      ],
+      "probability_underflow": false,
+      "direct_check_agrees": true
+    },
+    {
+      "order": 3,
+      "method": "add_k",
+      "k": 1.0,
+      "log_probability": -40.718678242066844,
+      "probability": 2.070631082995719e-18,
+      "zero_probability_events": [],
+      "probability_underflow": false,
+      "direct_check_agrees": true
+    },
+    {
+      "order": 4,
+      "method": "mle",
+      "k": null,
+      "log_probability": "-Infinity",
+      "probability": 0.0,
+      "zero_probability_events": [
+        {
+          "context": [
+            "ኢትዮጵያ",
+            "በአፍሪካ",
+            "ቀንድ"
+          ],
+          "target": "ትገኛለች",
+          "target_id": 3225
+        },
+        {
+          "context": [
+            "በአፍሪካ",
+            "ቀንድ",
+            "ትገኛለች"
+          ],
+          "target": "</s>",
+          "target_id": 3
+        }
+      ],
+      "probability_underflow": false,
+      "direct_check_agrees": true
+    },
+    {
+      "order": 4,
+      "method": "add_k",
+      "k": 1.0,
+      "log_probability": -41.420446569389895,
+      "probability": 1.02642829842658e-18,
+      "zero_probability_events": [],
+      "probability_underflow": false,
+      "direct_check_agrees": true
+    }
+  ]
+}

@@ -1,0 +1,121 @@
+{
+  "status": "ok",
+  "input_train_path": "/kaggle/input/datasets/naomimeseret/amharic-ngram-processed-full/amharic-ngram-processed-full/train.npy",
+  "input_train_sha256": "c88588aa527108a3376676c355c212dc79136fcfb879f7a4c54796d070dabb42",
+  "input_vocab_path": "/kaggle/input/datasets/naomimeseret/amharic-ngram-processed-full/amharic-ngram-processed-full/vocab.txt",
+  "input_vocab_sha256": "84d8c01602e96fc132bd109d578adaf796b23f1c4aeed696a911b46e7f798e7c",
+  "elapsed_seconds": 1137.7634157400003,
+  "peak_rss_gib": 1.8247604370117188,
+  "working_disk_used_gib": 3.9160985043272376,
+  "trainer_report": {
+    "status": "ok",
+    "source_ids_processed": 68942614,
+    "complete_sentences": 4067589,
+    "raw_occurrences_by_order": {
+      "1": 64875025,
+      "2": 64875025,
+      "3": 64875025,
+      "4": 64875025
+    },
+    "unique_ngrams_by_order": {
+      "1": 49998,
+      "2": 10265086,
+      "3": 27987839,
+      "4": 38108498
+    },
+    "model_array_bytes": 1825270720,
+    "work_run_bytes_before_cleanup": 2378847931,
+    "elapsed_seconds": 1137.7547029870002,
+    "peak_local_occurrence_keys": 2000000,
+    "merge_buffer_entries": 65536,
+    "cleanup_runs_requested": false
+  },
+  "model_metadata": {
+    "format_version": 2,
+    "storage_format": "little-endian raw uint64 arrays; memory-mapped",
+    "max_order": 4,
+    "vocabulary_size": 50000,
+    "preprocessing_rules_version": "preprocessing-v2",
+    "prediction_outcomes": "all vocabulary IDs except <PAD> and <s>; includes <UNK> and </s>",
+    "counting": "sentence-local; <s> is context only; </s> is a prediction target",
+    "array_lengths": {
+      "1": {
+        "keys": 49998,
+        "counts": 49998,
+        "context_keys": 0,
+        "context_totals": 0
+      },
+      "2": {
+        "keys": 10265086,
+        "counts": 10265086,
+        "context_keys": 49998,
+        "context_totals": 49998
+      },
+      "3": {
+        "keys": 27987839,
+        "counts": 27987839,
+        "context_keys": 10242760,
+        "context_totals": 10242760
+      },
+      "4": {
+        "keys": 38108498,
+        "counts": 38108498,
+        "context_keys": 27375241,
+        "context_totals": 27375241
+      }
+    },
+    "source_train_path": "/kaggle/input/datasets/naomimeseret/amharic-ngram-processed-full/amharic-ngram-processed-full/train.npy",
+    "source_ids_processed": 68942614,
+    "complete_sentences": 4067589,
+    "raw_occurrences_by_order": {
+      "1": 64875025,
+      "2": 64875025,
+      "3": 64875025,
+      "4": 64875025
+    },
+    "unique_ngrams_by_order": {
+      "1": 49998,
+      "2": 10265086,
+      "3": 27987839,
+      "4": 38108498
+    },
+    "counting_configuration": {
+      "train_path": "/kaggle/input/datasets/naomimeseret/amharic-ngram-processed-full/amharic-ngram-processed-full/train.npy",
+      "train_size_bytes": 275770584,
+      "train_mtime_ns": 1792757412007000000,
+      "vocabulary_sha256": "84d8c01602e96fc132bd109d578adaf796b23f1c4aeed696a911b46e7f798e7c",
+      "max_order": 4,
+      "scan_chunk_tokens": 1000000,
+      "run_occurrences_limit": 2000000,
+      "merge_buffer_size": 65536,
+      "max_tokens": null,
+      "max_sentence_tokens": 100
+    }
+  },
+  "query_checks": {
+    "add_k_probability": 0.12527239861598552,
+    "add_k_log_probability": -2.077264723740214,
+    "predict_next_top_five": [
+      [
+        "ውስጥ",
+        0.07978220286247667
+      ],
+      [
+        "ነገ",
+        0.014019912881144991
+      ],
+      [
+        "ቡና",
+        0.009215930304915992
+      ],
+      [
+        "ላይ",
+        0.0074113254511512135
+      ],
+      [
+        "የጋራ",
+        0.007087741132545115
+      ]
+    ]
+  }
+}

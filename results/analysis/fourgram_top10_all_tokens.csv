@@ -1,0 +1,11 @@
+﻿rank,ngram,token_1,token_2,token_3,token_4,count
+1,<s> <s> <s> <UNK>,<s>,<s>,<s>,<UNK>,515819
+2,<s> <s> <UNK> <UNK>,<s>,<s>,<UNK>,<UNK>,105922
+3,<UNK> <UNK> <UNK> <UNK>,<UNK>,<UNK>,<UNK>,<UNK>,89095
+4,<s> <s> <s> ይህ,<s>,<s>,<s>,ይህ,78676
+5,<s> <s> <s> <NUM>,<s>,<s>,<s>,<NUM>,71181
+6,<s> <s> <s> በዚህ,<s>,<s>,<s>,በዚህ,47324
+7,<NUM> <NUM> <NUM> <NUM>,<NUM>,<NUM>,<NUM>,<NUM>,47288
+8,<s> <s> <s> ከዚህ,<s>,<s>,<s>,ከዚህ,33254
+9,ቀን <NUM> አ ም,ቀን,<NUM>,አ,ም,29562
+10,<s> <s> <s> ስለዚህ,<s>,<s>,<s>,ስለዚህ,28639

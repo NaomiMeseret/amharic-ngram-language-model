@@ -1,0 +1,709 @@
+{
+  "model_directory": "/kaggle/working/ngram_results/model",
+  "model_max_order": 4,
+  "source_train_path": "/kaggle/input/datasets/naomimeseret/amharic-ngram-processed-full/amharic-ngram-processed-full/train.npy",
+  "unique_ngrams_by_order": {
+    "1": 49998,
+    "2": 10265086,
+    "3": 27987839,
+    "4": 38108498
+  },
+  "top_ngrams": {
+    "1": {
+      "all_tokens": [
+        {
+          "tokens": [
+            "<UNK>"
+          ],
+          "count": 8476878
+        },
+        {
+          "tokens": [
+            "</s>"
+          ],
+          "count": 4067589
+        },
+        {
+          "tokens": [
+            "ነው"
+          ],
+          "count": 921688
+        },
+        {
+          "tokens": [
+            "<NUM>"
+          ],
+          "count": 887452
+        },
+        {
+          "tokens": [
+            "ላይ"
+          ],
+          "count": 594173
+        },
+        {
+          "tokens": [
+            "ውስጥ"
+          ],
+          "count": 273656
+        },
+        {
+          "tokens": [
+            "ወደ"
+          ],
+          "count": 260934
+        },
+        {
+          "tokens": [
+            "እና"
+          ],
+          "count": 246281
+        },
+        {
+          "tokens": [
+            "ጋር"
+          ],
+          "count": 229818
+        },
+        {
+          "tokens": [
+            "ነበር"
+          ],
+          "count": 217891
+        }
+      ],
+      "word_only": [
+        {
+          "tokens": [
+            "ነው"
+          ],
+          "count": 921688
+        },
+        {
+          "tokens": [
+            "ላይ"
+          ],
+          "count": 594173
+        },
+        {
+          "tokens": [
+            "ውስጥ"
+          ],
+          "count": 273656
+        },
+        {
+          "tokens": [
+            "ወደ"
+          ],
+          "count": 260934
+        },
+        {
+          "tokens": [
+            "እና"
+          ],
+          "count": 246281
+        },
+        {
+          "tokens": [
+            "ጋር"
+          ],
+          "count": 229818
+        },
+        {
+          "tokens": [
+            "ነበር"
+          ],
+          "count": 217891
+        },
+        {
+          "tokens": [
+            "ግን"
+          ],
+          "count": 214337
+        },
+        {
+          "tokens": [
+            "ጊዜ"
+          ],
+          "count": 193009
+        },
+        {
+          "tokens": [
+            "ነገር"
+          ],
+          "count": 171940
+        }
+      ]
+    },
+    "2": {
+      "all_tokens": [
+        {
+          "tokens": [
+            "<UNK>",
+            "<UNK>"
+          ],
+          "count": 1491423
+        },
+        {
+          "tokens": [
+            "<UNK>",
+            "</s>"
+          ],
+          "count": 630379
+        },
+        {
+          "tokens": [
+            "ነው",
+            "</s>"
+          ],
+          "count": 599837
+        },
+        {
+          "tokens": [
+            "<s>",
+            "<UNK>"
+          ],
+          "count": 515819
+        },
+        {
+          "tokens": [
+            "<NUM>",
+            "<NUM>"
+          ],
+          "count": 252742
+        },
+        {
+          "tokens": [
+            "ነበር",
+            "</s>"
+          ],
+          "count": 163859
+        },
+        {
+          "tokens": [
+            "<UNK>",
+            "ነው"
+          ],
+          "count": 115304
+        },
+        {
+          "tokens": [
+            "ላይ",
+            "<UNK>"
+          ],
+          "count": 102680
+        },
+        {
+          "tokens": [
+            "ናቸው",
+            "</s>"
+          ],
+          "count": 85843
+        },
+        {
+          "tokens": [
+            "አ",
+            "ም"
+          ],
+          "count": 81929
+        }
+      ],
+      "word_only": [
+        {
+          "tokens": [
+            "አ",
+            "ም"
+          ],
+          "count": 81929
+        },
+        {
+          "tokens": [
+            "ነገር",
+            "ግን"
+          ],
+          "count": 35269
+        },
+        {
+          "tokens": [
+            "ዶ",
+            "ር"
+          ],
+          "count": 28055
+        },
+        {
+          "tokens": [
+            "ብቻ",
+            "ሳይሆን"
+          ],
+          "count": 25946
+        },
+        {
+          "tokens": [
+            "ማለት",
+            "ነው"
+          ],
+          "count": 25588
+        },
+        {
+          "tokens": [
+            "አዲስ",
+            "አበባ"
+          ],
+          "count": 24541
+        },
+        {
+          "tokens": [
+            "ብቻ",
+            "ነው"
+          ],
+          "count": 19443
+        },
+        {
+          "tokens": [
+            "በአዲስ",
+            "አበባ"
+          ],
+          "count": 18922
+        },
+        {
+          "tokens": [
+            "ምክር",
+            "ቤት"
+          ],
+          "count": 18825
+        },
+        {
+          "tokens": [
+            "አለም",
+            "አቀፍ"
+          ],
+          "count": 16862
+        }
+      ]
+    },
+    "3": {
+      "all_tokens": [
+        {
+          "tokens": [
+            "<s>",
+            "<s>",
+            "<UNK>"
+          ],
+          "count": 515819
+        },
+        {
+          "tokens": [
+            "<UNK>",
+            "<UNK>",
+            "<UNK>"
+          ],
+          "count": 327027
+        },
+        {
+          "tokens": [
+            "<UNK>",
+            "<UNK>",
+            "</s>"
+          ],
+          "count": 113346
+        },
+        {
+          "tokens": [
+            "<s>",
+            "<UNK>",
+            "<UNK>"
+          ],
+          "count": 105922
+        },
+        {
+          "tokens": [
+            "<NUM>",
+            "<NUM>",
+            "<NUM>"
+          ],
+          "count": 93641
+        },
+        {
+          "tokens": [
+            "<s>",
+            "<s>",
+            "ይህ"
+          ],
+          "count": 78676
+        },
+        {
+          "tokens": [
+            "<s>",
+            "<s>",
+            "<NUM>"
+          ],
+          "count": 71181
+        },
+        {
+          "tokens": [
+            "<UNK>",
+            "ነው",
+            "</s>"
+          ],
+          "count": 68440
+        },
+        {
+          "tokens": [
+            "<NUM>",
+            "አ",
+            "ም"
+          ],
+          "count": 50387
+        },
+        {
+          "tokens": [
+            "<s>",
+            "<s>",
+            "በዚህ"
+          ],
+          "count": 47324
+        }
+      ],
+      "word_only": [
+        {
+          "tokens": [
+            "እ",
+            "ኤ",
+            "አ"
+          ],
+          "count": 13138
+        },
+        {
+          "tokens": [
+            "አ",
+            "ም",
+            "ኢሳት"
+          ],
+          "count": 7537
+        },
+        {
+          "tokens": [
+            "ም",
+            "ኢሳት",
+            "ዜና"
+          ],
+          "count": 7483
+        },
+        {
+          "tokens": [
+            "ቀን",
+            "አ",
+            "ም"
+          ],
+          "count": 5540
+        },
+        {
+          "tokens": [
+            "አ",
+            "ም",
+            "ጀምሮ"
+          ],
+          "count": 4888
+        },
+        {
+          "tokens": [
+            "ተወካዮች",
+            "ምክር",
+            "ቤት"
+          ],
+          "count": 4398
+        },
+        {
+          "tokens": [
+            "በአለም",
+            "አቀፍ",
+            "ደረጃ"
+          ],
+          "count": 4227
+        },
+        {
+          "tokens": [
+            "በሌላ",
+            "በኩል",
+            "ደግሞ"
+          ],
+          "count": 4147
+        },
+        {
+          "tokens": [
+            "የአዲስ",
+            "አበባ",
+            "ከተማ"
+          ],
+          "count": 3881
+        },
+        {
+          "tokens": [
+            "በአዲስ",
+            "አበባ",
+            "ከተማ"
+          ],
+          "count": 3205
+        }
+      ]
+    },
+    "4": {
+      "all_tokens": [
+        {
+          "tokens": [
+            "<s>",
+            "<s>",
+            "<s>",
+            "<UNK>"
+          ],
+          "count": 515819
+        },
+        {
+          "tokens": [
+            "<s>",
+            "<s>",
+            "<UNK>",
+            "<UNK>"
+          ],
+          "count": 105922
+        },
+        {
+          "tokens": [
+            "<UNK>",
+            "<UNK>",
+            "<UNK>",
+            "<UNK>"
+          ],
+          "count": 89095
+        },
+        {
+          "tokens": [
+            "<s>",
+            "<s>",
+            "<s>",
+            "ይህ"
+          ],
+          "count": 78676
+        },
+        {
+          "tokens": [
+            "<s>",
+            "<s>",
+            "<s>",
+            "<NUM>"
+          ],
+          "count": 71181
+        },
+        {
+          "tokens": [
+            "<s>",
+            "<s>",
+            "<s>",
+            "በዚህ"
+          ],
+          "count": 47324
+        },
+        {
+          "tokens": [
+            "<NUM>",
+            "<NUM>",
+            "<NUM>",
+            "<NUM>"
+          ],
+          "count": 47288
+        },
+        {
+          "tokens": [
+            "<s>",
+            "<s>",
+            "<s>",
+            "ከዚህ"
+          ],
+          "count": 33254
+        },
+        {
+          "tokens": [
+            "ቀን",
+            "<NUM>",
+            "አ",
+            "ም"
+          ],
+          "count": 29562
+        },
+        {
+          "tokens": [
+            "<s>",
+            "<s>",
+            "<s>",
+            "ስለዚህ"
+          ],
+          "count": 28639
+        }
+      ],
+      "word_only": [
+        {
+          "tokens": [
+            "አ",
+            "ም",
+            "ኢሳት",
+            "ዜና"
+          ],
+          "count": 7468
+        },
+        {
+          "tokens": [
+            "የህዝብ",
+            "ተወካዮች",
+            "ምክር",
+            "ቤት"
+          ],
+          "count": 2257
+        },
+        {
+          "tokens": [
+            "የአዲስ",
+            "አበባ",
+            "ከተማ",
+            "አስተዳደር"
+          ],
+          "count": 2099
+        },
+        {
+          "tokens": [
+            "በ",
+            "የኔ",
+            "ሀሳብ",
+            "አምድ"
+          ],
+          "count": 1908
+        },
+        {
+          "tokens": [
+            "ኦርቶዶክስ",
+            "ተዋህዶ",
+            "ቤተ",
+            "ክርስቲያን"
+          ],
+          "count": 1671
+        },
+        {
+          "tokens": [
+            "ጠቅላይ",
+            "ሚኒስትር",
+            "አብይ",
+            "አህመድ"
+          ],
+          "count": 1276
+        },
+        {
+          "tokens": [
+            "የኢትዮጵያ",
+            "ኦርቶዶክስ",
+            "ተዋህዶ",
+            "ቤተ"
+          ],
+          "count": 1275
+        },
+        {
+          "tokens": [
+            "አብይ",
+            "አህመድ",
+            "ዶ",
+            "ር"
+          ],
+          "count": 1082
+        },
+        {
+          "tokens": [
+            "ጽሁፉ",
+            "የጸሀፊውን",
+            "አመለካከት",
+            "ብቻ"
+          ],
+          "count": 1060
+        },
+        {
+          "tokens": [
+            "የጸሀፊውን",
+            "አመለካከት",
+            "ብቻ",
+            "የሚያንጸባርቅ"
+          ],
+          "count": 1058
+        }
+      ]
+    }
+  },
+  "bigram_probability_settings": {
+    "candidate_minimum_count": 20,
+    "candidate_words_exclude": [
+      "</s>",
+      "<NUM>",
+      "<PAD>",
+      "<UNK>",
+      "<s>"
+    ],
+    "candidate_token_substring_excluded": "<NUM>",
+    "smoothing": "add-k",
+    "k": 1.0,
+    "prediction_vocabulary_size": 49998,
+    "prediction_outcomes": "all vocabulary IDs except <PAD> and <s>; includes <UNK> and </s>"
+  },
+  "bigram_conditional_probabilities": [
+    {
+      "rank": 1,
+      "word_1": "አ",
+      "word_2": "ም",
+      "bigram_count": 81929,
+      "context_count": 108143,
+      "mle_probability": 0.7575987350082761,
+      "add_k": 1.0,
+      "add_k_probability": 0.5180819648288553,
+      "prediction_vocabulary_size": 49998
+    },
+    {
+      "rank": 2,
+      "word_1": "ነገር",
+      "word_2": "ግን",
+      "bigram_count": 35269,
+      "context_count": 171940,
+      "mle_probability": 0.20512388042340352,
+      "add_k": 1.0,
+      "add_k_probability": 0.15891825644999955,
+      "prediction_vocabulary_size": 49998
+    },
+    {
+      "rank": 3,
+      "word_1": "ዶ",
+      "word_2": "ር",
+      "bigram_count": 28055,
+      "context_count": 28472,
+      "mle_probability": 0.9853540320314695,
+      "add_k": 1.0,
+      "add_k_probability": 0.3575379125780553,
+      "prediction_vocabulary_size": 49998
+    },
+    {
+      "rank": 4,
+      "word_1": "ብቻ",
+      "word_2": "ሳይሆን",
+      "bigram_count": 25946,
+      "context_count": 133773,
+      "mle_probability": 0.19395543196310167,
+      "add_k": 1.0,
+      "add_k_probability": 0.14119202703364514,
+      "prediction_vocabulary_size": 49998
+    },
+    {
+      "rank": 5,
+      "word_1": "ማለት",
+      "word_2": "ነው",
+      "bigram_count": 25588,
+      "context_count": 75258,
+      "mle_probability": 0.34000372053469397,
+      "add_k": 1.0,
+      "add_k_probability": 0.20429360669349172,
+      "prediction_vocabulary_size": 49998
+    }
+  ]
+}

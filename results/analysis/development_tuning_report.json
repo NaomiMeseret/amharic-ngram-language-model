@@ -1,0 +1,429 @@
+{
+  "model_directory": "/kaggle/working/ngram_results/model",
+  "development_path": "/kaggle/input/datasets/naomimeseret/amharic-ngram-processed-full/amharic-ngram-processed-full/dev.npy",
+  "development_tuning_only": true,
+  "test_data_used": false,
+  "perplexity_computed": false,
+  "seed": 42,
+  "sampled_complete_sentences": 5000,
+  "scored_prediction_events_including_eos": 80507,
+  "add_k_grid": [
+    0.01,
+    0.1,
+    0.5,
+    1.0,
+    2.0,
+    5.0
+  ],
+  "best_add_k_by_order": {
+    "1": {
+      "order": 1,
+      "k": 0.01,
+      "mean_dev_log_probability": -7.800991356931869,
+      "prediction_vocabulary_size": 49998,
+      "events": 80507
+    },
+    "2": {
+      "order": 2,
+      "k": 0.01,
+      "mean_dev_log_probability": -6.264504835116886,
+      "prediction_vocabulary_size": 49998,
+      "events": 80507
+    },
+    "3": {
+      "order": 3,
+      "k": 0.01,
+      "mean_dev_log_probability": -7.738734359772477,
+      "prediction_vocabulary_size": 49998,
+      "events": 80507
+    },
+    "4": {
+      "order": 4,
+      "k": 0.01,
+      "mean_dev_log_probability": -9.060943847809796,
+      "prediction_vocabulary_size": 49998,
+      "events": 80507
+    }
+  },
+  "interpolation_weight_grid_step": 0.25,
+  "interpolation_candidates_tested": 35,
+  "best_interpolation": {
+    "weights_unigram_bigram_trigram_fourgram": [
+      0.25,
+      0.25,
+      0.25,
+      0.25
+    ],
+    "mean_dev_log_probability": -5.725790547628856,
+    "events": 80507
+  },
+  "prediction_vocabulary_size": 49998,
+  "normalization_tolerance": 1e-06,
+  "normalization_checks": [
+    {
+      "context_number": 1,
+      "method": "add_k",
+      "order": 1,
+      "context": [],
+      "parameter": {
+        "k": 0.01
+      },
+      "probability_sum": 1.0,
+      "absolute_error_from_one": 0.0
+    },
+    {
+      "context_number": 1,
+      "method": "add_k",
+      "order": 2,
+      "context": [
+        "<s>"
+      ],
+      "parameter": {
+        "k": 0.01
+      },
+      "probability_sum": 1.0,
+      "absolute_error_from_one": 0.0
+    },
+    {
+      "context_number": 1,
+      "method": "add_k",
+      "order": 3,
+      "context": [
+        "<s>",
+        "<s>"
+      ],
+      "parameter": {
+        "k": 0.01
+      },
+      "probability_sum": 1.0,
+      "absolute_error_from_one": 0.0
+    },
+    {
+      "context_number": 1,
+      "method": "add_k",
+      "order": 4,
+      "context": [
+        "<s>",
+        "<s>",
+        "<s>"
+      ],
+      "parameter": {
+        "k": 0.01
+      },
+      "probability_sum": 1.0,
+      "absolute_error_from_one": 0.0
+    },
+    {
+      "context_number": 1,
+      "method": "interpolation",
+      "order": 4,
+      "context": [
+        "<s>",
+        "<s>",
+        "<s>"
+      ],
+      "parameter": {
+        "weights": [
+          0.25,
+          0.25,
+          0.25,
+          0.25
+        ]
+      },
+      "probability_sum": 1.0,
+      "absolute_error_from_one": 0.0
+    },
+    {
+      "context_number": 2,
+      "method": "add_k",
+      "order": 1,
+      "context": [],
+      "parameter": {
+        "k": 0.01
+      },
+      "probability_sum": 1.0,
+      "absolute_error_from_one": 0.0
+    },
+    {
+      "context_number": 2,
+      "method": "add_k",
+      "order": 2,
+      "context": [
+        "ልምምድ"
+      ],
+      "parameter": {
+        "k": 0.01
+      },
+      "probability_sum": 1.0,
+      "absolute_error_from_one": 0.0
+    },
+    {
+      "context_number": 2,
+      "method": "add_k",
+      "order": 3,
+      "context": [
+        "<s>",
+        "ልምምድ"
+      ],
+      "parameter": {
+        "k": 0.01
+      },
+      "probability_sum": 1.0,
+      "absolute_error_from_one": 0.0
+    },
+    {
+      "context_number": 2,
+      "method": "add_k",
+      "order": 4,
+      "context": [
+        "<s>",
+        "<s>",
+        "ልምምድ"
+      ],
+      "parameter": {
+        "k": 0.01
+      },
+      "probability_sum": 1.0,
+      "absolute_error_from_one": 0.0
+    },
+    {
+      "context_number": 2,
+      "method": "interpolation",
+      "order": 4,
+      "context": [
+        "<s>",
+        "<s>",
+        "ልምምድ"
+      ],
+      "parameter": {
+        "weights": [
+          0.25,
+          0.25,
+          0.25,
+          0.25
+        ]
+      },
+      "probability_sum": 1.0,
+      "absolute_error_from_one": 0.0
+    },
+    {
+      "context_number": 3,
+      "method": "add_k",
+      "order": 1,
+      "context": [],
+      "parameter": {
+        "k": 0.01
+      },
+      "probability_sum": 1.0,
+      "absolute_error_from_one": 0.0
+    },
+    {
+      "context_number": 3,
+      "method": "add_k",
+      "order": 2,
+      "context": [
+        "እንኳን"
+      ],
+      "parameter": {
+        "k": 0.01
+      },
+      "probability_sum": 0.9999999999999999,
+      "absolute_error_from_one": 1.1102230246251565e-16
+    },
+    {
+      "context_number": 3,
+      "method": "add_k",
+      "order": 3,
+      "context": [
+        "ልምምድ",
+        "እንኳን"
+      ],
+      "parameter": {
+        "k": 0.01
+      },
+      "probability_sum": 1.0,
+      "absolute_error_from_one": 0.0
+    },
+    {
+      "context_number": 3,
+      "method": "add_k",
+      "order": 4,
+      "context": [
+        "<s>",
+        "ልምምድ",
+        "እንኳን"
+      ],
+      "parameter": {
+        "k": 0.01
+      },
+      "probability_sum": 1.0,
+      "absolute_error_from_one": 0.0
+    },
+    {
+      "context_number": 3,
+      "method": "interpolation",
+      "order": 4,
+      "context": [
+        "<s>",
+        "ልምምድ",
+        "እንኳን"
+      ],
+      "parameter": {
+        "weights": [
+          0.25,
+          0.25,
+          0.25,
+          0.25
+        ]
+      },
+      "probability_sum": 1.0,
+      "absolute_error_from_one": 0.0
+    },
+    {
+      "context_number": 4,
+      "method": "add_k",
+      "order": 1,
+      "context": [],
+      "parameter": {
+        "k": 0.01
+      },
+      "probability_sum": 1.0,
+      "absolute_error_from_one": 0.0
+    },
+    {
+      "context_number": 4,
+      "method": "add_k",
+      "order": 2,
+      "context": [
+        "ያደረኩት"
+      ],
+      "parameter": {
+        "k": 0.01
+      },
+      "probability_sum": 1.0,
+      "absolute_error_from_one": 0.0
+    },
+    {
+      "context_number": 4,
+      "method": "add_k",
+      "order": 3,
+      "context": [
+        "እንኳን",
+        "ያደረኩት"
+      ],
+      "parameter": {
+        "k": 0.01
+      },
+      "probability_sum": 1.0,
+      "absolute_error_from_one": 0.0
+    },
+    {
+      "context_number": 4,
+      "method": "add_k",
+      "order": 4,
+      "context": [
+        "ልምምድ",
+        "እንኳን",
+        "ያደረኩት"
+      ],
+      "parameter": {
+        "k": 0.01
+      },
+      "probability_sum": 1.0,
+      "absolute_error_from_one": 0.0
+    },
+    {
+      "context_number": 4,
+      "method": "interpolation",
+      "order": 4,
+      "context": [
+        "ልምምድ",
+        "እንኳን",
+        "ያደረኩት"
+      ],
+      "parameter": {
+        "weights": [
+          0.25,
+          0.25,
+          0.25,
+          0.25
+        ]
+      },
+      "probability_sum": 1.0,
+      "absolute_error_from_one": 0.0
+    },
+    {
+      "context_number": 5,
+      "method": "add_k",
+      "order": 1,
+      "context": [],
+      "parameter": {
+        "k": 0.01
+      },
+      "probability_sum": 1.0,
+      "absolute_error_from_one": 0.0
+    },
+    {
+      "context_number": 5,
+      "method": "add_k",
+      "order": 2,
+      "context": [
+        "ለሁለት"
+      ],
+      "parameter": {
+        "k": 0.01
+      },
+      "probability_sum": 1.0,
+      "absolute_error_from_one": 0.0
+    },
+    {
+      "context_number": 5,
+      "method": "add_k",
+      "order": 3,
+      "context": [
+        "ያደረኩት",
+        "ለሁለት"
+      ],
+      "parameter": {
+        "k": 0.01
+      },
+      "probability_sum": 1.0,
+      "absolute_error_from_one": 0.0
+    },
+    {
+      "context_number": 5,
+      "method": "add_k",
+      "order": 4,
+      "context": [
+        "እንኳን",
+        "ያደረኩት",
+        "ለሁለት"
+      ],
+      "parameter": {
+        "k": 0.01
+      },
+      "probability_sum": 1.0,
+      "absolute_error_from_one": 0.0
+    },
+    {
+      "context_number": 5,
+      "method": "interpolation",
+      "order": 4,
+      "context": [
+        "እንኳን",
+        "ያደረኩት",
+        "ለሁለት"
+      ],
+      "parameter": {
+        "weights": [
+          0.25,
+          0.25,
+          0.25,
+          0.25
+        ]
+      },
+      "probability_sum": 1.0,
+      "absolute_error_from_one": 0.0
+    }
+  ]
+}
