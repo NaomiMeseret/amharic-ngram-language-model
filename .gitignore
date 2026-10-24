@@ -2,3 +2,7 @@
 *.npy
 *.tmp
 __pycache__/
+results/ngram_slices/
+results/ngram_full/
+model/
+.DS_Store
