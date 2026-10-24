@@ -1,0 +1,57 @@
+[
+  {
+    "rank": 1,
+    "word_1": "አ",
+    "word_2": "ም",
+    "bigram_count": 81929,
+    "context_count": 108143,
+    "mle_probability": 0.7575987350082761,
+    "add_k": 1.0,
+    "add_k_probability": 0.5180819648288553,
+    "prediction_vocabulary_size": 49998
+  },
+  {
+    "rank": 2,
+    "word_1": "ነገር",
+    "word_2": "ግን",
+    "bigram_count": 35269,
+    "context_count": 171940,
+    "mle_probability": 0.20512388042340352,
+    "add_k": 1.0,
+    "add_k_probability": 0.15891825644999955,
+    "prediction_vocabulary_size": 49998
+  },
+  {
+    "rank": 3,
+    "word_1": "ዶ",
+    "word_2": "ር",
+    "bigram_count": 28055,
+    "context_count": 28472,
+    "mle_probability": 0.9853540320314695,
+    "add_k": 1.0,
+    "add_k_probability": 0.3575379125780553,
+    "prediction_vocabulary_size": 49998
+  },
+  {
+    "rank": 4,
+    "word_1": "ብቻ",
+    "word_2": "ሳይሆን",
+    "bigram_count": 25946,
+    "context_count": 133773,
+    "mle_probability": 0.19395543196310167,
+    "add_k": 1.0,
+    "add_k_probability": 0.14119202703364514,
+    "prediction_vocabulary_size": 49998
+  },
+  {
+    "rank": 5,
+    "word_1": "ማለት",
+    "word_2": "ነው",
+    "bigram_count": 25588,
+    "context_count": 75258,
+    "mle_probability": 0.34000372053469397,
+    "add_k": 1.0,
+    "add_k_probability": 0.20429360669349172,
+    "prediction_vocabulary_size": 49998
+  }
+]
