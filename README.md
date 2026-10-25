@@ -26,9 +26,33 @@ The current analysis outputs include:
 
 These compact CSV and JSON files are in `results/analysis/`.
 
-### 4. Remaining group integration
+### 4. Evaluation results
 
-The repository does not currently contain completed reports for stopword experiments, official perplexity or test-set evaluation, random sentence generation, or Top-1/Top-5 predictive-text evaluation. Coordinate these items with the members responsible for them. The test split must remain reserved for final evaluation.
+All evaluation uses the test split only for the final measurement. Settings (add-k values and interpolation weights) were tuned on the development split.
+
+**Intrinsic evaluation (perplexity).** We measured how well each model predicts the unseen test text (8,074,537 predictions). Report: `report/intrinsic_evaluation.md`.
+
+| n | add-k, whole test set | backoff, 500 sentences | interpolation, 500 sentences |
+|---|---|---|---|
+| 1 | 2,428 | 2,378 | not computed |
+| 2 | 538 | 458 | not computed |
+| 3 | 1,910 | 409 | not computed |
+| 4 | 6,483 | 410 | 334 |
+
+- Without smoothing (MLE) the perplexity is infinite for n = 2, 3, 4, because 13.6%, 45.7% and 67.4% of the test bigrams, trigrams and 4-grams never appeared in training.
+- One word of context cuts perplexity by about 78%. After that, plain add-k gets worse, while backoff and interpolation keep the gains. Interpolation of all four orders was the best result (334).
+
+**Extrinsic evaluation (next-word prediction and real vs. shuffled sentences).** Report: `report/extrinsic_evaluation.md`.
+
+| n | top-1 | top-5 | contexts seen in training | real vs. shuffled accuracy |
+|---|---|---|---|---|
+| 1 | 1.7% | 5.5% | 100% | 0.50 |
+| 2 | 10.8% | 22.1% | 100% | 0.99 |
+| 3 | 13.2% | 22.5% | 85.5% | 0.99 |
+| 4 | 11.4% | 16.3% | 54.2% | 0.99 |
+
+- These use exact n-gram lookup with no backoff, on 2,000 test sentences (next-word) and 998 (real vs. shuffled).
+- The trigram is the best overall. The 4-gram is more accurate when its context was seen (21% top-1), but 46% of its contexts were never seen. A suggestion system should therefore back off to shorter contexts.
 
 ## Repository layout
 
