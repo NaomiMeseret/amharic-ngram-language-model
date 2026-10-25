@@ -8,12 +8,22 @@ INTERP_WEIGHTS = [0.2, 0.4, 0.1, 0.3]  # tuned by the team on dev (full model)
 
 
 # ----------------------------------------------------------------- data helpers
+def _sentence_bounds(ids):
+    starts = np.flatnonzero(ids == BOS)
+    ends = np.flatnonzero(ids == EOS)
+    if len(starts) != len(ends):
+        raise ValueError("malformed stream: unequal numbers of <s> and </s>")
+    if len(ids) and (len(starts) == 0 or ids[0] != BOS or ids[-1] != EOS):
+        raise ValueError("malformed stream: must start with <s> and end with </s>")
+    if np.any(ends <= starts) or np.any(starts[1:] <= ends[:-1]):
+        raise ValueError("malformed stream: nested <s>, stray </s>, or markers out of order")
+    return starts, ends
+
+
 def sample_sentences(ids, n_sent, seed=42):
     """Random subset of complete <s> ... </s> sentences (all of them if n_sent is None)."""
     ids = np.asarray(ids)
-    starts = np.flatnonzero(ids == BOS)
-    ends = np.flatnonzero(ids == EOS)
-    assert len(starts) == len(ends), "malformed sentence stream"
+    starts, ends = _sentence_bounds(ids)
     if n_sent is None or n_sent >= len(starts):
         return ids
     rng = np.random.default_rng(seed)
