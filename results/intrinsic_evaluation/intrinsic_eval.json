@@ -1,0 +1,88 @@
+{
+  "best_k": {
+    "1": 1e-05,
+    "2": 0.01,
+    "3": 0.001,
+    "4": 0.0003
+  },
+  "interp_weights": {
+    "4": [
+      0.2,
+      0.4,
+      0.1,
+      0.3
+    ]
+  },
+  "test_events": 8074537,
+  "slow_sample_sentences": 500,
+  "vocab_size": 50000,
+  "test_unk_rate": 0.12402247894827821,
+  "fast": [
+    {
+      "n": 1,
+      "events": 8074537,
+      "MLE": 2427.509918120365,
+      "MLE zero-prob %": 0.0,
+      "add-1": 2427.524944085888,
+      "k (dev)": 1e-05,
+      "add-k": 2427.509918234179
+    },
+    {
+      "n": 2,
+      "events": 8074537,
+      "MLE": Infinity,
+      "MLE zero-prob %": 13.58,
+      "add-1": 1490.306224693776,
+      "k (dev)": 0.01,
+      "add-k": 538.2816280785854
+    },
+    {
+      "n": 3,
+      "events": 8074537,
+      "MLE": Infinity,
+      "MLE zero-prob %": 45.66,
+      "add-1": 9517.385204665265,
+      "k (dev)": 0.001,
+      "add-k": 1909.7839028733417
+    },
+    {
+      "n": 4,
+      "events": 8074537,
+      "MLE": Infinity,
+      "MLE zero-prob %": 67.37,
+      "add-1": 21603.31619869359,
+      "k (dev)": 0.0003,
+      "add-k": 6482.918277574271
+    }
+  ],
+  "slow": [
+    {
+      "n": 1,
+      "events": 7938,
+      "add-k (same sample)": 2377.7238808713264,
+      "backoff": 2377.7238809285045,
+      "interpolation": NaN
+    },
+    {
+      "n": 2,
+      "events": 7938,
+      "add-k (same sample)": 532.5929070373898,
+      "backoff": 457.8384747630931,
+      "interpolation": NaN
+    },
+    {
+      "n": 3,
+      "events": 7938,
+      "add-k (same sample)": 1961.0018171459947,
+      "backoff": 408.6250723185095,
+      "interpolation": NaN
+    },
+    {
+      "n": 4,
+      "events": 7938,
+      "add-k (same sample)": 6740.917420506827,
+      "backoff": 410.49146201281206,
+      "interpolation": 333.5896495919706
+    }
+  ]
+}

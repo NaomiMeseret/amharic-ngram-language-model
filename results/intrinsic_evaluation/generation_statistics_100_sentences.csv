@@ -1,0 +1,5 @@
+order,ended naturally %,avg words,fallback % of steps,bigrams in training %,trigrams in training %,4-grams in training %
+1,86.0,12.4,0.0,28.3,0.2,0.0
+2,89.0,13.3,0.0,100.0,17.5,1.7
+3,88.0,13.4,2.8,100.0,96.7,41.5
+4,89.0,14.0,7.7,100.0,97.2,90.3
