@@ -11,8 +11,8 @@ Generate random sentences from the unigram, bigram, trigram and 4-gram models, a
 - **No smoothing.** Only continuations seen in training can be generated. `<UNK>` is excluded from the candidates.
 - **Fallback.** If the current n-1 word context was never seen, the generator uses a shorter context for that step. The *fallback ratio* is the share of steps that needed this.
 - **Two runs:**
-  - Examples: 5 sentences per order, maximum 25 words, seed 42.
-  - Statistics: 100 sentences per order, maximum 30 words, seed 0.
+  - Examples: 5 sentences per order, maximum 25 words, seed 42. Saved in `results/generated_sentences.txt`.
+  - Statistics: 100 sentences per order, maximum 30 words, seed 0. Saved in `results/generation_statistics_100_sentences.csv`.
 - **Statistics reported per order** (over the 100 sentences):
   - *ended naturally*: share of sentences that stopped at `</s>` before the limit
   - *avg words*: mean sentence length
@@ -21,7 +21,7 @@ Generate random sentences from the unigram, bigram, trigram and 4-gram models, a
 
 ## 3. Results
 
-### 3.1 Examples (generated text, copied from the notebook output)
+### 3.1 Examples (generated text, copied from the notebook output and saved in `results/intrinsic_evaluation/generated_sentences.txt`)
 
 **n = 1**
 - በዴሞክራሲያዊ ታላቅ የበኩር በወር \<NUM\> የዲግሪ የምናገኘው ኢዴፓ እና እድሜ ምላሽ እንዲጫወት ወዲያውኑ በመጡ ው ምክንያት ጠላት
@@ -41,7 +41,7 @@ Generate random sentences from the unigram, bigram, trigram and 4-gram models, a
 - ብለው ይጠይቃሉ
 - ምንድን ነው
 
-### 3.2 Statistics (100 sentences per order)
+### 3.2 Statistics (100 sentences per order, saved in `results/intrsinsic_evaluation/generation_statistics_100_sentences.csv`)
 
 | n | ended naturally % | avg words | fallback % of steps | bigrams in training % | trigrams in training % | 4-grams in training % |
 |---|---|---|---|---|---|---|
@@ -50,7 +50,7 @@ Generate random sentences from the unigram, bigram, trigram and 4-gram models, a
 | 3 | 88.0 | 13.4 | 2.8 | 100.0 | 96.7 | 41.5 |
 | 4 | 89.0 | 14.0 | 7.7 | 100.0 | 97.2 | 90.3 |
 
-For n = 1 the fallback is 0% by definition (there is no context to back off from).
+For n = 1 the fallback is 0% by definition (there is no context to back off from). The fallback printed under the n = 4 examples in the notebook (0.0%) comes from only 5 sentences; the 100-sentence value (7.7%) is the one to use.
 
 ## 4. What happens as n increases
 
@@ -94,10 +94,9 @@ A simple way to read it: a perplexity of 400 means the model is as unsure as if 
 
 ## 3. Data and settings
 
-- **Model:** vocabulary of 50,000 entries (49,998 of them can be predicted), orders 1 to 4.
 - **Test data:** `test.npy`, 8,579,227 tokens. We count a prediction for every word and for the end-of-sentence marker `</s>`, which gives 8,074,537 predictions. The start marker `<s>` is only used as context.
-- **Unknown words:** 12.40% of the test tokens are `<UNK>` (words that are not in the 50,000-word vocabulary).
-- **Settings were chosen on a separate dev set, not on the test set.** The best add-k values were k = 0.00001, 0.01, 0.001 and 0.0003 for n = 1 to 4. The best mixing weights for interpolation were 0.2, 0.4, 0.1, 0.3 (unigram, bigram, trigram, 4-gram).
+- **Unknown words:** 14.06% of the ordinary test tokens (the words) are `<UNK>`, which means they are not in the 50,000-word vocabulary. If we count every ID in the file, including the sentence markers `<s>` and `</s>`, the figure is 12.40%. Among the 8,074,537 predictions that perplexity is computed on, it is 13.18%.
+- **Settings were chosen on a separate dev set, not on the test set.**  The best add-k values from her refined search were k = 0.00001, 0.01, 0.001 and 0.0003 for n = 1 to 4 (`analysis/add_k_tuning.csv`). The best mixing weights for interpolation were 0.2, 0.4, 0.1, 0.3 for unigram, bigram, trigram and 4-gram
 
 ## 4. The five ways we compute probabilities
 
@@ -109,7 +108,11 @@ A simple way to read it: a perplexity of 400 means the model is as unsure as if 
 
 ## 5. Results
 
+All numbers below are also stored in `results/intrsinsic_evaluation/intrinsic_eval.json`.
+
 ### 5.1 Whole test set (8,074,537 predictions)
+
+Saved in `results/intrsinsic_evaluation/perplexity_full_test.csv`.
 
 | n | MLE | predictions with zero MLE probability | add-1 | add-k (best k) | k |
 |---|-----|------|-------|----------------|---|
@@ -120,7 +123,7 @@ A simple way to read it: a perplexity of 400 means the model is as unsure as if 
 
 ### 5.2 Same 500 test sentences, all methods (7,938 predictions)
 
-Backoff and interpolation are slow to compute, so we used 500 random whole sentences from the test set. We also recomputed add-k on the same 500 sentences so the comparison is fair.
+Saved in `results/intrsinsic_evaluation/perplexity_500_sentence_sample.csv`. Backoff and interpolation are slow to compute, so we used 500 random whole sentences from the test set. We also recomputed add-k on the same 500 sentences so the comparison is fair. These numbers are from the 500-sentence sample and must not be mixed with the whole-test-set numbers in 5.1.
 
 | n | add-k | backoff | interpolation |
 |---|-------|---------|---------------|
@@ -129,9 +132,9 @@ Backoff and interpolation are slow to compute, so we used 500 random whole sente
 | 3 | 1,961 | **409** | not computed |
 | 4 | 6,741 | 410 | **334** |
 
-For n = 1, backoff is the same as add-k because there is no shorter pattern to go back to. Interpolation was computed only for n = 4, because the tuned weights are for the mix of all four models.
+For n = 1 there is no shorter pattern to go back to, so backoff reduces to the plain unigram probability (the unigram MLE). Add-k with k = 0.00001 is almost the same, so the two columns look equal after rounding (2,378 and 2,378), but the two methods are not mathematically identical. Interpolation was computed only for n = 4, because the tuned weights are for the mix of all four models.
 
-A chart of this table is saved as `results/intrinsic_ppl_by_order.png` (log scale).
+A chart of this table is saved as `results/intrinsic_evaluation/intrinsic_ppl_by_order.png` (log scale).
 
 ### 5.3 Comparing n = 1, 2, 3 and 4
 
@@ -147,7 +150,7 @@ On the same 500 sentences, interpolation (334) is 18.7% lower than backoff (410)
 
 ### 5.4 Examples on real Amharic test sentences
 
-We picked three random test sentences (9 to 14 words, no unknown words) and measured the perplexity of each one. "Bits" below are the same idea as perplexity, written as -log2 of the probability: 3 bits means the word was as surprising as one out of 8 equally likely words.
+We picked three random test sentences with 7 to 12 tokens each and no `<UNK>` words, so that they are easy to read. (The notebook filter counted the markers `<s>` and `</s>` as well, so it asked for 9 to 14 tokens in total.) We measured the perplexity of each one. The word-by-word table is saved in `results/intrinsic_evaluation/intrinsic_amharic_demo.html`. "Bits" in that table are the same idea as perplexity, written as -log2 of the probability: 3 bits means the word was as surprising as one out of 8 equally likely words.
 
 | Sentence | bigram add-k | 4-gram add-k | 4-gram backoff | 4-gram interpolation |
 |---|---|---|---|---|
@@ -157,7 +160,7 @@ We picked three random test sentences (9 to 14 words, no unknown words) and meas
 
 What we saw:
 
-- Many words in the 4-gram add-k column cost exactly 15.6 bits. That is log2(49,998), which means the model gave up and guessed evenly among all words, because it had never seen the 3 words before.
+- Many words in the 4-gram add-k column cost about 15.6 bits. That is log2(49,998), which means the model guessed evenly among all words, because it had never seen this word after the three words before it.
 - In sentence 3, the word ነበሩ cost 12.0 bits for the bigram but only 0.2 bits for 4-gram backoff. The phrase "ሁለቱም ከእሱ ጋር" is almost always followed by ነበሩ in the training text, so the longer context helped a lot.
 - Sentence 1 has many rare words, and there the plain bigram won. Longer contexts cannot help when the words are rare. So the best method is not best for every sentence, only on average.
 
@@ -168,8 +171,8 @@ What we saw:
 3. **The reason is sparsity.** Many longer patterns in the test data never appeared in training: 13.6% of bigrams, 45.7% of trigrams and 67.4% of 4-grams. MLE gives them probability 0 (infinite perplexity). Add-k gives them a nearly even guess over about 50,000 words, which is a bad guess. Backoff and interpolation use shorter patterns instead.
 4. **Add-1 is a poor choice for this data.** It was 2.8 times worse than tuned add-k for n = 2 and 3.3 times worse for n = 4.
 5. **Interpolation was the best overall (334).** It always uses all four models, so it uses the extra context when it exists and the shorter patterns when it does not.
-6. **Dev and test agree.** The perplexities we expected from the dev set (about 2,443, 526, 1,841 and 6,183 for add-k) are within about 5% of the test results, so tuning on dev did not overfit.
+6. **Dev and test agree.** The perplexities we expected from the dev set (about 2,443, 526, 1,841 and 6,183 for add-k) are within about 5% of the test results. This suggests that tuning on dev did not overfit.
 
 ## 7. Conclusion
 
-All four models were evaluated on the same unseen test text. Perplexity falls sharply from the unigram (about 2,400) to the bigram (about 500), and it does not keep falling for longer n unless the model can fall back to shorter patterns. Plain add-k gets worse for the trigram and 4-gram, backoff fixes this, and interpolation of all four models gives the best result (334). 
+All four models were evaluated on the same unseen test text. Perplexity falls sharply from the unigram (about 2,400) to the bigram (about 500), and it does not keep falling for longer n unless the model can fall back to shorter patterns. Plain add-k gets worse for the trigram and 4-gram, backoff fixes this, and interpolation of all four models gives the best result (334).

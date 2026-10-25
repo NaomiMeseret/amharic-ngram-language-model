@@ -30,7 +30,7 @@ These compact CSV and JSON files are in `results/analysis/`.
 
 All evaluation uses the test split only for the final measurement. Settings (add-k values and interpolation weights) were tuned on the development split.
 
-**Intrinsic evaluation (perplexity).** We measured how well each model predicts the unseen test text (8,074,537 predictions). Report: `report/intrinsic_evaluation.md`.
+**Intrinsic evaluation (perplexity).** We measured how well each model predicts the unseen test text (8,074,537 predictions). Report: `report/intrinsic_evaluation_and_generation.md`.
 
 | n | add-k, whole test set | backoff, 500 sentences | interpolation, 500 sentences |
 |---|---|---|---|
